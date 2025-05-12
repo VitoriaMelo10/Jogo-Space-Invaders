@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Space Invarders</title>
+    <link rel="stylesheet" href="style.css">
+    <link href= link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+
+</head>
+<body>
+    <h1> Space Invaders </h1>
+    <h2>Use as setas ← → para mover e espaço para atirar.</h2>
+    <div class="game">
+      <canvas id="gameCanvas" width="900" height="550"></canvas>
+      <canvas id="confettiCanvas"></canvas>
+    </div>
+    <div id="info">
+      <p>Pontuação: <span id="score">0</span></p>
+      <p>Vidas: <span id="lives">3</span></p>
+    </div>
+    <div id="gameOverOverlay" style="display: none;">
+      <div id="gameOverMessage">
+        <h2>Game Over!</h2>
+        <p>Seu escore: <span id="finalScore"></span></p>
+        <button onclick="reiniciarJogo()">Reiniciar</button>
+      </div>
+    </div>
+  
+    <div id="victoryOverlay" style="display: none">
+
+  
+  <p>PARABÉNS, VOCÊ VENCEU !!!</p>
+  <p>Pontuação final: <span id="victoryScore"></span></p>
+  <button onclick="reiniciarJogo()">Jogar Novamente</button>
+</div>
+
+<audio id="tiroSom" src="sound/tiro.wav" preload="auto"></audio>
+<audio id="explosaoSom" src="sound/explosion.wav" preload="auto"></audio>
+<audio id="gameoverSom" src="sound/gameover.mp3" preload="auto"></audio>
+<audio id="fundoSom" src="sound/somdefundo.mp3" preload="auto" loop></audio>
+<audio id="levelup1Som" src="sound/levelup1.wav" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+    
+
