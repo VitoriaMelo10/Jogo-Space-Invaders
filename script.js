@@ -10,7 +10,7 @@ let alturaCanvas = canvas.height;
 
 // Variáveis para pontuação e vidas do jogador
 let score = 0;
-let lives = 3;
+let lives = 1;
 
 // Objeto que representa a nave do jogador
 let imagemJogador = new Image();
@@ -55,7 +55,7 @@ let invasorAltura = 30;    // altura de cada invasor
 let invasorLinhas = 3;     // número de linhas de invasores
 let invasorColunas = 10;    // número de colunas de invasores
 let invasoresVelocidadeX = 3;    // velocidade horizontal inicial dos invasores
-let invasoresVelocidadeY = 15;   // distância que descem ao mudar direção
+let invasoresVelocidadeY = 12;   // distância que descem ao mudar direção
 let confettiInstance = confetti;
 
 //vsriavel para som
@@ -125,7 +125,7 @@ function tocarSomLevelUp2() {
 }
 // Tocar som de fundo
 function tocarSomFundo() {
-  fundoSom.volume = 0.1; // Ajuste o volume conforme necessário
+  fundoSom.volume = 0.3; // Ajuste o volume conforme necessário
   fundoSom.play();
 }
 // parar som de fundo
@@ -357,7 +357,7 @@ loop();
  function reiniciarJogo() {
   // Redefine as variáveis do jogo para os valores iniciais
   score = 0;
-  lives = 3;  // Garantir que as vidas comecem com 3
+  lives = 1;  // Garantir que as vidas comecem com 3
   invasores.forEach(invasor => {
     invasor.vivo = true; 
     invasor.y = (Math.floor(invasores.indexOf(invasor) / invasorColunas)) * (invasorAltura + 10) + 30; // reposiciona os invasores
